@@ -73,8 +73,8 @@ include("../controller/header.php");
  
  <fieldset style="border: 3px solid #333; padding: 10px; border-radius: 5px; background-color: #ecf0f1;">
     <legend style="color: #333; font-weight: bold;">FOOD ITEMS</legend>
+   
     
-
 <?php 
 $con = connection();
 //if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -85,6 +85,10 @@ $con = connection();
     
 //}
 
+echo 'Date: '.date('d/m/Y'); 
+echo '<br>' ;
+date_default_timezone_set('Asia/Dhaka');
+echo 'Time: '.date('h:i:sa');
 $sql = "SELECT * FROM ta";
 
  $result = mysqli_query($con,$sql);
