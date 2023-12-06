@@ -20,7 +20,7 @@ if(isset($_SESSION['cart'])){
 
 ?>
 </button>
-<?php echo 'Date: '.date('d/m/Y'); ?>
+
 </form>
 
 </body>

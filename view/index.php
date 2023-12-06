@@ -62,10 +62,25 @@ if(isset($_POST['add'])){
  <head>
 
     <title>Shopping Cart</title>
-    
+    <link rel="stylesheet" href="assets/style.css" />
  </head>
  <body>
-
+ <div class="container">
+      <!-- Navbar -->
+      <div class="navbar">
+        <img src="assets/img/paw-logo.png" class="logo" />
+        <nav>
+          <ul>
+              <li><a href="dashboard.html">Dashboard</a></li>
+              <li><a href="updateCustomer.php">Edit Profile</a></li>
+            <li><a href="index.php">Shop</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="notification.html">Notifications</a></li>
+            <li><a href="../../Controllers/logout.php">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
 <?php 
 include("../controller/header.php");
 
@@ -73,7 +88,7 @@ include("../controller/header.php");
  
  <fieldset style="border: 3px solid #333; padding: 10px; border-radius: 5px; background-color: #ecf0f1;">
     <legend style="color: #333; font-weight: bold;">FOOD ITEMS</legend>
-   
+    
     
 <?php 
 $con = connection();
@@ -85,10 +100,10 @@ $con = connection();
     
 //}
 
-echo 'Date: '.date('d/m/Y'); 
-echo '<br>' ;
-date_default_timezone_set('Asia/Dhaka');
-echo 'Time: '.date('h:i:sa');
+//echo 'Date: '.date('d/m/Y'); 
+//echo '<br>' ;
+//date_default_timezone_set('Asia/Dhaka');
+//echo 'Time: '.date('h:i:sa');
 $sql = "SELECT * FROM ta";
 
  $result = mysqli_query($con,$sql);
@@ -110,7 +125,25 @@ $sql = "SELECT * FROM ta";
 
     </fieldset>
 
-     
+    <div class="footer">
+        <p class="container"> © 2023 Paw It Forward. All rights reserved.</p>
+        
+        <div class="container footer-content">
+            <div class="quickLinks">
+                <ul class="">
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="help.html">Help/FAQ</a></li>
+                </ul>
+            </div>
+            <div class="contactUs">
+                <p style="color: #fff; margin-bottom: 30px; margin-top: -20px;">Contact Us</p>
+                <ul>
+                    <li>Phone: +880 154 768521</li>
+                    <li>Email: pawitforward@gmail.com </li>
+                    <li>Website: www.pawitforward.com </li>
+                </ul>
+        </div>
+    </div>  
    
 
 </body>
