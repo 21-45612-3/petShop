@@ -12,8 +12,8 @@
  
 session_start();
 
-include("component.php");
-include("db.php");
+include("../controller/component.php");
+include("../model/db.php");
 
 if(isset($_POST['add'])){
 
@@ -62,16 +62,12 @@ if(isset($_POST['add'])){
  <head>
 
     <title>Shopping Cart</title>
-    <style>
-        body {
-            background-color: #196b7d;
-        }
-    </style>
+    
  </head>
  <body>
 
 <?php 
-include("header.php");
+include("../controller/header.php");
 
 ?>
  

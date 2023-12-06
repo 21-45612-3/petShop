@@ -1,8 +1,8 @@
 <?php 
 
 session_start();
-include("component.php");
-include("db.php");
+include("../controller/component.php");
+include("../model/db.php");
  if(isset($_POST['remove'])){
     if($_GET['action']=='remove'){
 

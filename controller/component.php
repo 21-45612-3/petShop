@@ -32,7 +32,7 @@ echo $element;
 function cartITEMS($productimg,$productname,$productprice,$productid){
 
     $element = "
-    <form action=\"cart.php?action=remove&id=$productid\" method=\"post\" style=\"text-align: center; margin: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 10px;\">
+    <form action=\"../view/cart.php?action=remove&id=$productid\" method=\"post\" style=\"text-align: center; margin: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 10px;\">
     <img src=\"$productimg\" alt=\"pic1\"><br>
 
     <h3 style=\"color: #333;\">$productname</h3><br>
