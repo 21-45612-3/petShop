@@ -62,13 +62,13 @@ if(isset($_POST['add'])){
  <head>
 
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="style.css" />
  </head>
  <body>
  <div class="container">
       <!-- Navbar -->
       <div class="navbar">
-        <img src="assets/img/paw-logo.png" class="logo" />
+        <img src="upload/paw-logo.png" class="logo" />
         <nav>
           <ul>
               <li><a href="dashboard.html">Dashboard</a></li>
