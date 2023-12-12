@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Review</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #postForm {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #comment {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #submitBtn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #submitBtn:hover {
+            background-color: #45a049;
+        }
+
+        #showReview {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #B {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #B:hover {
+            background-color: #2980b9;
+        }
+    </style>
+
+</head>
+<body>
+   
+
+    
+
+    <h1>Ajax POST FORM</h1>
+    <form id="postForm">
+        <input type="text" name="review" id="comment">
+        <input type="submit" value="submit">
+    </form>
+    
+    <script>
+       
+        document.getElementById('postForm').addEventListener('submit', postComment);
+
+
+        function postComment(e) {
+            e.preventDefault();
+            var review = document.getElementById('comment').value;
+            var x = new XMLHttpRequest();
+            var data = 'review=' + review;
+            x.open('POST', '../controller/review-proccess.php', true);
+            x.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            x.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                }
+            }
+            x.send(data);
+        }
+    </script>
+
+
+
+<h1>Reviews</h1>
+<button id = "B">show Review</button>
+<div id = "showReview"></div>
+
+<script>
+    document.getElementById('B').addEventListener('click', json_show);
+    
+    function json_show() {
+        var x = new XMLHttpRequest(); 
+    
+        x.open("GET", '../controller/review-view.php', true);
+    
+        x.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var review = JSON.parse(this.responseText); 
+                var output = '';
+    
+                for (var i in review) {
+                    output += "<ul>" +
+                        "<li>" + review[i].comment + "</li>" +
+                        "</ul>";
+                }
+                document.getElementById('showReview').innerHTML = output;
+            }
+        }
+        x.send();
+    }
+    </script>
+</body>
+</html>

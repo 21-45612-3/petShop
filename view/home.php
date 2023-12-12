@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>Home</title>
   </head>
   <body>
@@ -15,7 +15,7 @@
     <div class="container">
       <!-- Navbar -->
       <div class="navbar">
-        <img src="upload/paw-logo.png" class="logo" />
+        <img src="./upload/paw-logo.png" class="logo" />
         <nav>
           <ul>
               <li><a href="dashboard.html">Dashboard</a></li>
@@ -23,7 +23,7 @@
             <li><a href="index.php">Shop</a></li>
             <li><a href="aboutUs.html">About Us</a></li>
             <li><a href="notification.html">Notifications</a></li>
-            <li><a href="../../Controllers/logout.php">Logout</a></li>
+            <li><a href="../controller/logout.php">Logout</a></li>
           </ul>
         </nav>
       </div>

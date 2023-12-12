@@ -31,7 +31,7 @@
   <body>
     <form method="post" action="../view/cart.php">
       <button class="btn" type="submit" name="cart" value="cart">
-      Cart       
+      Cart Items:       
         <?php
           // session_start(); 
           if(isset($_SESSION['cart'])) {

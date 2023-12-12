@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>Login</title>
+
+    <style>
+body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(#c7efff, #a7d1f1);
+            height: 100vh;
+            margin: 0;
+        }
+     .container {
+            width: 300px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+      
+        }
+
+        input[type="email"], input[type="password"] {
+            border: 2px solid #161a30;
+            border-radius: 5px;
+        }
+
+        input[type="email"]:hover, input[type="password"]:hover {
+            border: 2px solid #e3651d;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"],
+        input[type="button"] {
+            width: 49%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+          
+            background-color: #161a30;
+            color: #fff;
+            box-sizing: border-box;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            cursor: pointer;
+            background-color: #e3651d;
+        }
+
+        input[type="button"]:hover {
+            cursor: pointer;
+            background-color: #e3651d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form method="post" action="../controller/login-check.php">
+
+        <div class="form-group">
+            <input type="email" name="email" placeholder="Enter your email">
+        </div>
+
+        <div class="form-group">
+            <input type="password" name="password" placeholder="Enter your password">
+        </div>
+
+        
+        <div class="form-group">
+            <input type="submit" name="submit" value="Login">
+            <input type="button" onclick="window.location='Registration.html'" value="Registration">
+        </div>
+
+
+    </form>
+</div>
+</body>
+</html>

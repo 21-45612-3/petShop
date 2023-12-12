@@ -3,7 +3,7 @@
 <head>
    
    <title>Document</title>
-   <script src="script.js"></script>
+   
   
 </head>
 <body>
@@ -26,7 +26,7 @@ if(isset($_POST['add'])){
      if(in_array($_POST['product_id'],$sss)){
   
   echo "<script>alert('item is already added') </script>";
-  //echo "<script>window.location='index.php'</script>";
+  echo "<script>window.location='index.php'</script>";
      }else{
   $how_many_element = count($_SESSION['cart']);
   $item_array = array(
@@ -62,13 +62,13 @@ if(isset($_POST['add'])){
  <head>
 
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
  </head>
  <body>
  <div class="container">
       <!-- Navbar -->
       <div class="navbar">
-        <img src="upload/paw-logo.png" class="logo" />
+        <img src="./upload/paw-logo.png" class="logo" />
         <nav>
           <ul>
               <li><a href="dashboard.html">Dashboard</a></li>
@@ -76,7 +76,7 @@ if(isset($_POST['add'])){
             <li><a href="index.php">Shop</a></li>
             <li><a href="aboutUs.html">About Us</a></li>
             <li><a href="notification.html">Notifications</a></li>
-            <li><a href="../../Controllers/logout.php">Logout</a></li>
+            <li><a href="../controller/logout.php">Logout</a></li>
           </ul>
         </nav>
       </div>
@@ -86,7 +86,10 @@ include("../controller/header.php");
 
 ?>
  
- <fieldset style="border: 3px solid #333; padding: 10px; border-radius: 5px; background-color: #ecf0f1;">
+ <fieldset style="border: 3px solid #333; padding: 10px; border-radius: 5px; background-color: #ecf0f1; width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; margin-bottom: 40px;">
     <legend style="color: #333; font-weight: bold;">FOOD ITEMS</legend>
     
     
@@ -146,6 +149,6 @@ $sql = "SELECT * FROM ta";
     </div>  
    
 
-</body>
+
  </body>
  </html>
