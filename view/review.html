@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>Review</title>
     <style>
         body {
@@ -33,20 +33,7 @@
             border-radius: 4px;
         }
 
-        #submitBtn {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        #submitBtn:hover {
-            background-color: #45a049;
-        }
+        
 
         #showReview {
             margin-top: 20px;
@@ -76,12 +63,26 @@
 <body>
    
 
+    <div class="container">
+        <!-- Navbar -->
+        <div class="navbar">
+          <img src="./assets/upload/paw-logo.png" class="logo" />
+          <nav>
+            <ul>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="index.php">Shop</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="../../Controllers/logout.php">Logout</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+<br> <Br>
+    <h1>Let us know what you think </h1>
     
-
-    <h1>Ajax POST FORM</h1>
-    <form id="postForm">
+    <form id="postForm" style="text-align: center;">
         <input type="text" name="review" id="comment">
-        <input type="submit" value="submit">
+        <input type="submit" style="align-items: center; justify-content: center;" value="submit">
     </form>
     
     <script>
@@ -135,5 +136,27 @@
         x.send();
     }
     </script>
+    <br> <br>
+
+
+<div class="footer">
+    <p class="container"> © 2023 Paw It Forward. All rights reserved.</p>
+    
+    <div class="container footer-content">
+        <div class="quickLinks">
+            <ul class="">
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="help.html">Help/FAQ</a></li>
+            </ul>
+        </div>
+        <div class="contactUs">
+            <p style="color: #fff; margin-bottom: 30px; margin-top: -20px;">Contact Us</p>
+            <ul>
+                <li>Phone: +880 154 768521</li>
+                <li>Email: pawitforward@gmail.com </li>
+                <li>Website: www.pawitforward.com </li>
+            </ul>
+    </div>
+</div>
 </body>
 </html>

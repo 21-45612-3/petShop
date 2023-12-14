@@ -10,10 +10,10 @@
         padding: 12px 18px;
         border-radius: 5px;
         font-size: 16px;
-        position: fixed;
-        top: 85px;
-        right: 100px;
-        float: right;
+        position: sticky;
+        
+        left: 50px;
+        float: left;
       }
 
       .btn:hover {

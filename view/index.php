@@ -63,24 +63,58 @@ if(isset($_POST['add'])){
 
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="./assets/style.css" />
+    <script src="./assets/abc.js"></script>
  </head>
- <body>
+ <body> 
+ <script>
+  function searchProduct() {
+    let search = document.getElementById('search').value;
+    let s = new XMLHttpRequest();
+    s.open('POST', '../controller/search.php', true);
+    s.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    s.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        //document.getElementById('searchResult').innerHTML = this.responseText;
+        let output = JSON.parse(this.responseText);
+
+let resultElement = document.getElementById('searchResult');
+resultElement.innerHTML = "";
+
+for (let i = 0; i < output.length; i++) {
+
+  resultElement.innerHTML += "<img src='" + output[i].product_img + "' alt='Product Image' style='width: 50px; height: 50px;'>";
+    resultElement.innerHTML += "<h5>Name: " + output[i].product_name + "</h5>";
+    resultElement.innerHTML += "<h5>Price: " + output[i].product_price + "</h5>";
+    
+    resultElement.innerHTML += "<hr>";
+}
+      }
+    }
+    s.send('search=' + search);
+  }
+</script>
+
+
  <div class="container">
       <!-- Navbar -->
       <div class="navbar">
-        <img src="./upload/paw-logo.png" class="logo" />
+        <img src="./assets/upload/paw-logo.png" class="logo" />
         <nav>
           <ul>
-              <li><a href="dashboard.html">Dashboard</a></li>
-              <li><a href="updateCustomer.php">Edit Profile</a></li>
-            <li><a href="index.php">Shop</a></li>
-            <li><a href="aboutUs.html">About Us</a></li>
-            <li><a href="notification.html">Notifications</a></li>
-            <li><a href="../controller/logout.php">Logout</a></li>
+             
+              <li>
+              <input type="text" name="search" id="search" value="" onkeyup="searchProduct()" style="position: sticky;" placeholder="Search"/>
+<div id="searchResult"></div>
+
+              </li>
+            <li><a href="home.php">Home</a></li>
+           
           </ul>
         </nav>
       </div>
     </div>
+
+
 <?php 
 include("../controller/header.php");
 

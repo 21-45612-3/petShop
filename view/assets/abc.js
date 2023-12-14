@@ -55,10 +55,6 @@ function validate_registration() {
         return false;
     
       }
-       
-      
-      
-      
      
       else if (password != Confirm) {
         document.getElementById("RegconfirmError").innerHTML =
@@ -77,4 +73,6 @@ function validate_registration() {
       }
       return true;
   }
+
+  
   

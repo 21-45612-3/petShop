@@ -11,18 +11,16 @@
     <title>Home</title>
   </head>
   <body>
-    <!-- Container -->
+    
     <div class="container">
       <!-- Navbar -->
       <div class="navbar">
-        <img src="./upload/paw-logo.png" class="logo" />
+        <img src="./assets/upload/paw-logo.png" class="logo" />
         <nav>
           <ul>
-              <li><a href="dashboard.html">Dashboard</a></li>
-              <li><a href="updateCustomer.php">Edit Profile</a></li>
+          <li><a href="home.php">Home</a></li>
             <li><a href="index.php">Shop</a></li>
             <li><a href="aboutUs.html">About Us</a></li>
-            <li><a href="notification.html">Notifications</a></li>
             <li><a href="../controller/logout.php">Logout</a></li>
           </ul>
         </nav>
@@ -43,7 +41,7 @@
             <h1 class="container">How can we help you?</h1>
             <ul class="container">
                 <li><a href="salonBooking.html">Book Saloon Appointment</a></li>
-                <li><a href="doctorBooking.php">Book Doctor's Appointment</a></li>
+                <li><a href="appointment.php">Book Doctor's Appointment</a></li>
                 <li><a href="petNutr.html">Pet Nutrition Guide</a></li>
                 <li><a href="review.html">Review</a></li>
             </ul>

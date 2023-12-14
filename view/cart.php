@@ -26,6 +26,21 @@ include("../model/db.php");
     <link rel="stylesheet" href="./assets/style.css" />
 </head>
 <body>
+<div class="container">
+      <!-- Navbar -->
+      <div class="navbar">
+        <img src="./assets/upload/paw-logo.png" class="logo" />
+        <nav>
+          <ul>
+          <li><a href="index.php">Go Back</a></li>
+          <li><a href="home.php">Home</a></li>
+            
+            <li><a href="../controller/logout.php">Logout</a></li>
+           
+          </ul>
+        </nav>
+      </div>
+    </div>
  </br>
  <h1>MY CART</h1> <hr> </br>
  
@@ -62,9 +77,9 @@ echo "<h5>cart is empty!</h5>";
   margin: 0 auto;
   padding: 0 15px; margin-bottom: 40px; ">
   <legend style="color: #333; font-weight: bold;">Order Details</legend>
- 
- <h5 style="text-align: center;">Paw It Forwart Is Always</h5>
- <h5 style="text-align: center;">At Your service</h5>
+     
+ <h5 style="text-align: center;">Paw It Forward Is Always</h5>
+ <h5 style="text-align: center;">At Your Service</h5>
  <h5 style="text-align: center;">Since 2023</h5>
  <br>
  <br>
